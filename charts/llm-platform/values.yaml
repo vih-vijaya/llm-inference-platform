@@ -1,0 +1,21 @@
+model: qwen2.5:0.5b
+
+ollama:
+  image: ollama/ollama:latest
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      memory: 2Gi
+
+gateway:
+  image: llm-gateway:0.1.0
+  replicas: 1
+  apiKey: change-me   # local demo only; never commit a real key
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      memory: 256Mi
