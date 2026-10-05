@@ -19,3 +19,10 @@ gateway:
       memory: 128Mi
     limits:
       memory: 256Mi
+
+gateway:
+  image: llm-gateway:0.2.0
+  # ...keep the rest as it was...
+
+monitoring:
+  enabled: true
